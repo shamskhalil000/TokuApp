@@ -1,7 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:tokuapp/models/data.dart';
-import 'package:tokuapp/screens/phrases.dart';
 
 class PhrasesItem extends StatelessWidget {
   const PhrasesItem(
@@ -27,16 +26,16 @@ class PhrasesItem extends StatelessWidget {
               children: [
                 Text(
                   number.Jpname,
-                  style: TextStyle(color: Colors.white, fontSize: 13),
+                  style: const TextStyle(color: Colors.white, fontSize: 13),
                 ),
                 Text(
                   number.Enname,
-                  style: TextStyle(color: Colors.white, fontSize: 13),
+                  style: const TextStyle(color: Colors.white, fontSize: 13),
                 )
               ],
             ),
           ),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
           IconButton(
@@ -44,7 +43,7 @@ class PhrasesItem extends StatelessWidget {
               AudioPlayer player = AudioPlayer();
               player.play(AssetSource('sounds/$type/${number.sound}'));
             },
-            icon: Icon(Icons.play_arrow, color: Colors.white, size: 32),
+            icon: const Icon(Icons.play_arrow, color: Colors.white, size: 32),
           ),
         ],
       ),

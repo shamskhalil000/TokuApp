@@ -3,8 +3,8 @@ import 'package:tokuapp/components/item.dart';
 import 'package:tokuapp/models/data.dart';
 
 class ColorsPage extends StatelessWidget {
-  const ColorsPage({super.key});
-  final List<Data> numbers = const [
+  ColorsPage({super.key});
+  final List<Data> numbers = [
     Data(
         image: 'assets/images/colors/color_black.png',
         Jpname: "kuro",
@@ -54,7 +54,7 @@ class ColorsPage extends StatelessWidget {
             'Colors',
             style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Color(0xFF4a322a),
+          backgroundColor: const Color(0xFF4a322a),
         ),
         body: ListView.builder(
           itemCount: numbers.length,
